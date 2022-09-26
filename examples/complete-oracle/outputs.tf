@@ -18,6 +18,11 @@ output "db_instance_endpoint" {
   value       = module.db.db_instance_endpoint
 }
 
+output "db_passsword" {
+  value     = random_password.db_password.result
+  sensitive = true
+}  
+  
 output "db_instance_engine" {
   description = "The database engine"
   value       = module.db.db_instance_engine
