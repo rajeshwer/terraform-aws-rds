@@ -33,6 +33,14 @@ module "db_subnet_group" {
   tags = merge(var.tags, var.db_subnet_group_tags)
 }
 
+module "oracle" {
+  source = "./modules/complete-oracle"
+
+}
+  
+  
+  
+  
 module "db_parameter_group" {
   source = "./modules/db_parameter_group"
 
